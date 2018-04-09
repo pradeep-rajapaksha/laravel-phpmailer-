@@ -35,8 +35,8 @@ class Mailer extends Model
     { 
         // 
         $to = $request->has('to') ? $request->to :"pradeepprasanna.rajapaksha4@gmail.com";
-        $from = $request->has('from') ? $request->from :"pradeep@listudiosl.com";
-        $subject = $request->has('subject') ? $request->subject :"test mail subject";
+        $from = $request->has('from') ? $request->from :"pradeep@witellsolutions.com";
+        $subject = $request->has('subject') ? $request->subject :"Test mail subject";
         $message = $request->has('message') ? $request->message :"This is the <b>test</b> HTML message body!";
         $cc = $request->has('cc') ? $request->cc : null;
         $bcc = $request->has('bcc') ? $request->bcc : null;
@@ -163,9 +163,9 @@ class Mailer extends Model
      * @return Srting filename
      */
     public function __send_email(   $to = "pradeepprasanna.rajapaksha4@gmail.com", 
-                                    $subject = "test mail subject", 
+                                    $subject = "Test mail subject", 
                                     $message = "This is the <b>test</b> HTML message body!", 
-                                    $from = "pradeep@witelsolutions.com", 
+                                    $from = "pradeep@witellsolutions.com", 
                                     $cc = null, $bcc = null, $attachment = null, $attachname = null )
     {
         // // // 
@@ -174,8 +174,8 @@ class Mailer extends Model
             $this->__config_mail();
 
             //Recipients
-            $this->mailer->setFrom($from, 'W.I Tel Emailer');
-            $this->mailer->addAddress($to, 'Emailer User');     // Add a recipient
+            $this->mailer->setFrom($from, 'Laravel PHPMailer');
+            $this->mailer->addAddress($to, 'PHPMailer');     // Add a recipient
             // $this->mailer->addAddress('ellen@example.com');               // Name is optional
             // $this->mailer->addReplyTo('info@example.com', 'Information');
             

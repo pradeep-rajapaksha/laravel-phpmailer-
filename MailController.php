@@ -29,8 +29,8 @@ class MailController extends Controller
     public function mail(Request $request)
     { 
         // 
-        $to = $request->has('to') ? $request->to :"dev.pradeepr@gmail.com";
-        $from = $request->has('from') ? $request->from :"pradeep@listudiosl.com";
+        $to = $request->has('to') ? $request->to :"pradeepprasanna.rajapaksha4@gmail.com";
+        $from = $request->has('from') ? $request->from :"pradeep@witellsolutions.com";
         $subject = $request->has('subject') ? $request->subject :"test mail subject";
         $message = $request->has('message') ? $request->message :"This is the <b>test</b> HTML message body!";
         $cc = $request->has('cc') ? $request->cc : null;
