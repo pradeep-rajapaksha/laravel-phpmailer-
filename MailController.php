@@ -20,13 +20,6 @@ use App\Mailer;
 class MailController extends Controller
 {
 
-    private $mailer;
-
-    public function __construct(PHPMailer $mailer)
-    {
-        $this->mailer = $mailer;
-    }
-
     /**
      * Send an e-mail.
      *
